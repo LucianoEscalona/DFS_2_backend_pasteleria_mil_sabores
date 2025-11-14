@@ -25,12 +25,14 @@ public class productoServicio {
     public producto obtenerProductoID(int id_p){
         return repositorio.findById(id_p).orElse(null);
     }
+    /*
     public producto obtenerProductoCategoria(String categoria_p){
         return repositorio.findByCategoria(categoria_p);
     }
     public producto obtenerProductoNombre(String nombre_p){
         return repositorio.findByNombre(nombre_p);
     }
+    */
     public producto modificarProducto(producto p_mod){
         producto prod_modificado = repositorio.findById(p_mod.getP_id()).orElse(null);
             prod_modificado.setP_nombre(p_mod.getP_nombre());

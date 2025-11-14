@@ -47,6 +47,11 @@ public class boleta {
 
     @Override
     public String toString() {
-        return "boleta{" + "b_id=" + b_id + ", b_id_detalle=" + b_id_detalle + ", b_nombre_comprador=" + b_nombre_comprador + ", b_nombre_recibidor=" + b_nombre_recibidor + ", b_monto_total=" + b_monto_total + '}';
+        return "boleta{" 
+            + "b_id=" + b_id 
+            + ", b_id_detalle=" + b_id_detalle 
+            + ", b_nombre_comprador=" + b_nombre_comprador 
+            + ", b_nombre_recibidor=" + b_nombre_recibidor 
+            + ", b_monto_total=" + b_monto_total + '}';
     }
 }

@@ -29,6 +29,7 @@ public class productoControlador {
     public producto c_obtenerProductoID(@PathVariable int p_id){
         return servicio.obtenerProductoID(p_id);
     }
+    /*
     @GetMapping("/productoByCategoria/{p_categoria}")
     public producto c_obtenerProductoCategoria(@PathVariable String p_categoria){
         return servicio.obtenerProductoCategoria(p_categoria);
@@ -37,7 +38,7 @@ public class productoControlador {
     public producto c_obtenerProductoNombre(@PathVariable String p_nombre){
         return servicio.obtenerProductoNombre(p_nombre);
     }
-    
+    */
     @PutMapping("/modificarProducto")
     public producto c_modificarProducto(@RequestBody producto p){
         return servicio.modificarProducto(p);
