@@ -10,6 +10,8 @@ public class producto {
     @GeneratedValue
     private int p_id;
     
+    @Column(name="p_codigo")
+    private String p_codigo;
     @Column(name="p_nombre")
     private String p_nombre;
     @Column(name="p_categoria")
@@ -23,6 +25,11 @@ public class producto {
     @Column(name="p_stock_critico")
     private int p_stock_critico;
 
+    public String getP_codigo() 
+        {return p_codigo;}
+    public void setP_codigo(String p_codigo) 
+        {this.p_codigo = p_codigo;}
+    
     public int getP_id() 
         {return p_id;}
     public void setP_id(int p_id) 

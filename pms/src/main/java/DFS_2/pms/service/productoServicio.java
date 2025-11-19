@@ -35,6 +35,7 @@ public class productoServicio {
     */
     public producto modificarProducto(producto p_mod){
         producto prod_modificado = repositorio.findById(p_mod.getP_id()).orElse(null);
+            prod_modificado.setP_codigo(p_mod.getP_codigo());
             prod_modificado.setP_nombre(p_mod.getP_nombre());
             prod_modificado.setP_categoria(p_mod.getP_categoria());
             prod_modificado.setP_descripcion(p_mod.getP_descripcion());
