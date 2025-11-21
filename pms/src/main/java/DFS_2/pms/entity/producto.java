@@ -3,11 +3,12 @@ package DFS_2.pms.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="PRODUCTO")
-public class producto {
+@Table (name = "PRODUCTO")
+public class Producto {
     
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "producto_seq")
+    @SequenceGenerator(name = "producto_seq", sequenceName = "PRODUCTO_SEQ", allocationSize = 1)
     private int p_id;
     
     @Column(name="p_codigo")
@@ -20,10 +21,14 @@ public class producto {
     private String p_descripcion;
     @Column(name="p_precio")
     private int p_precio;
+    @Column(name="p_imagen")
+    private String p_imagen;
     @Column(name="p_stock")
     private int p_stock;
     @Column(name="p_stock_critico")
     private int p_stock_critico;
+    @Column(name="p_precio_oferta")
+    private int p_precio_oferta;
 
     public String getP_codigo() 
         {return p_codigo;}
@@ -65,6 +70,24 @@ public class producto {
     public void setP_stock_critico(int p_stock_critico) 
         {this.p_stock_critico = p_stock_critico;}
 
+    public String getP_imagen() {
+        return p_imagen;
+    }
+
+    public void setP_imagen(String p_imagen) {
+        this.p_imagen = p_imagen;
+    }
+
+    public int getP_precio_oferta() {
+        return p_precio_oferta;
+    }
+
+    public void setP_precio_oferta(int p_precio_oferta) {
+        this.p_precio_oferta = p_precio_oferta;
+    }
+    
+    
+    
     @Override
     public String toString() 
     {
