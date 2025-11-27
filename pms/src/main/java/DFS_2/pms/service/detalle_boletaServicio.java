@@ -13,6 +13,7 @@ public class detalle_boletaServicio {
     private detalle_boletaRepositorio repositorio;
     
     //CRUD
+    @SuppressWarnings("null")
     public detalle_boleta guardarDetalle_boleta(detalle_boleta db){
         return repositorio.save(db);
     }

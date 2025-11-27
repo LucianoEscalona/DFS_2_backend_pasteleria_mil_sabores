@@ -13,6 +13,7 @@ public class categoriaServicio {
     private categoriaRepositorio repositorio;
     
     //CRUD
+    @SuppressWarnings("null")
     public categoria guardarCategoria(categoria c){
         return repositorio.save(c);
     }

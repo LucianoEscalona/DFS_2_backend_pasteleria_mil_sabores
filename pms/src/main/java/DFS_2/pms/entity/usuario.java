@@ -1,7 +1,6 @@
 package DFS_2.pms.entity;
 
 import jakarta.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name="USUARIOS")

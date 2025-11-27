@@ -13,9 +13,11 @@ public class usuarioServicio {
     private usuarioRepositorio repositorio;
     
     //CRUD
+    @SuppressWarnings("null")
     public usuario guardarUsuario(usuario u){
         return repositorio.save(u);
     }
+    @SuppressWarnings("null")
     public List<usuario> guardarUsuarios(List<usuario> ls_u){
         return repositorio.saveAll(ls_u);
     }

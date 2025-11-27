@@ -14,6 +14,7 @@ public class boletaServicio {
     private boletaRepositorio repositorio;
     
     //CRUD
+    @SuppressWarnings("null")
     public boleta guardarBoleta(boleta b){
         return repositorio.save(b);
     }

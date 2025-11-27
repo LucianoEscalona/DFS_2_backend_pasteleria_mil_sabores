@@ -3,16 +3,20 @@ package DFS_2.pms.controller;
 
 import DFS_2.pms.entity.detalle_boleta;
 import DFS_2.pms.service.detalle_boletaServicio;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@Tag(name = "Detalle Boletas", description = "API para gestión de detalles de boletas")
 public class detalle_boletaControlador {
     
     @Autowired
     private detalle_boletaServicio servicio;
     
+    @Operation(summary = "Crear detalle de boleta", description = "Registra un nuevo detalle asociado a una boleta")
     @PostMapping("/addDetalle_boleta")
     public detalle_boleta c_guardarProducto(@RequestBody detalle_boleta db){
         return servicio.guardarDetalle_boleta(db);
@@ -20,7 +24,7 @@ public class detalle_boletaControlador {
     public List<detalle_boleta> c_obtenerDetalle_boletas(){
         return servicio.obtenerDetalle_boletas();
     }
-    @GetMapping("/etalle_boletaByID/{db_id}")
+    @GetMapping("/detalle_boletaByID/{db_id}")
     public detalle_boleta c_obtenerDetalle_boletaID(@PathVariable int db_id){
         return servicio.obtenerDetalle_boletaID(db_id);
     }
