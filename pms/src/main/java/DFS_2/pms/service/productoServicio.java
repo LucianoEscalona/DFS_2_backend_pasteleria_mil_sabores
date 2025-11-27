@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import DFS_2.pms.repository.productoRepositorio;
 
 @Service
-    public class ProductoServicio {
+public class ProductoServicio {
     
     @Autowired
     private productoRepositorio repositorio;
