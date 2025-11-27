@@ -9,7 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@Tag(name = "Categorías", description = "API para gestión de categorías de productos")
+@RequestMapping("/api/v1")
+@Tag(name = "Categorías V1", description = "API v1 para gestión de categorías de productos")
 public class categoriaControlador {
     
     @Autowired

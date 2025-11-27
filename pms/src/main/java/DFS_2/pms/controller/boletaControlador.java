@@ -9,7 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@Tag(name = "Boletas", description = "API para gestión de boletas de venta")
+@RequestMapping("/api/v1")
+@Tag(name = "Boletas V1", description = "API v1 para gestión de boletas de venta")
 public class boletaControlador {
     
     @Autowired

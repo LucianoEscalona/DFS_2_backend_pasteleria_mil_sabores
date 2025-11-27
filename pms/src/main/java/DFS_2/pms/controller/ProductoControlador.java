@@ -11,8 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/api/v1")
 @CrossOrigin(origins = "http://localhost:5173")
-@Tag(name = "Productos", description = "API para gestión de productos de la pastelería")
+@Tag(name = "Productos V1", description = "API v1 para gestión de productos de la pastelería")
 public class ProductoControlador {
     
     @Autowired

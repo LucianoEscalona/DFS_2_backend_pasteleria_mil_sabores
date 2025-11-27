@@ -9,7 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@Tag(name = "Usuarios", description = "API para gestión de usuarios del sistema")
+@RequestMapping("/api/v1")
+@Tag(name = "Usuarios V1", description = "API v1 para gestión de usuarios del sistema")
 public class usuarioController {
     
     @Autowired
