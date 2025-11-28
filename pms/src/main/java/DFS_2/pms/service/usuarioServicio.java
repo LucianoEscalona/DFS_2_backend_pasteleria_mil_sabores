@@ -51,4 +51,13 @@ public class usuarioServicio {
         repositorio.deleteById(u_id);
         return "Usuario eliminado correctamente.";
     }
+    
+    // Método para validar login
+    public usuario validarLogin(String correo, String password){
+        List<usuario> usuarios = repositorio.findAll();
+        return usuarios.stream()
+            .filter(u -> u.getU_correo().equals(correo) && u.getU_contrasenia().equals(password))
+            .findFirst()
+            .orElse(null);
+    }
 }
