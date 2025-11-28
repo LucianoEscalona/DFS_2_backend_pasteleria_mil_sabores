@@ -14,9 +14,9 @@ public class boleta {
     private int b_id_detalle;
     
     @Column(name="b_nombre_comprador")
-    private int b_nombre_comprador;
+    private String b_nombre_comprador;
     @Column(name="b_nombre_recibidor")
-    private int b_nombre_recibidor;
+    private String b_nombre_recibidor;
     @Column(name="b_monto_total")
     private int b_monto_total;
 
@@ -30,14 +30,14 @@ public class boleta {
     public void setB_id_detalle(int b_id_detalle) {
         this.b_id_detalle = b_id_detalle;}
 
-    public int getB_nombre_comprador() {
+    public String getB_nombre_comprador() {
         return b_nombre_comprador;}
-    public void setB_nombre_comprador(int b_nombre_comprador) {
+    public void setB_nombre_comprador(String b_nombre_comprador) {
         this.b_nombre_comprador = b_nombre_comprador;}
 
-    public int getB_nombre_recibidor() {
+    public String getB_nombre_recibidor() {
         return b_nombre_recibidor;}
-    public void setB_nombre_recibidor(int b_nombre_recibidor) {
+    public void setB_nombre_recibidor(String b_nombre_recibidor) {
         this.b_nombre_recibidor = b_nombre_recibidor;}
 
     public int getB_monto_total() {

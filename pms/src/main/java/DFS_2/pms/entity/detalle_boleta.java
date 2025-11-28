@@ -20,7 +20,7 @@ public class detalle_boleta {
     private String db_nombre_recibidor;
     
     @Column(name="db_direccion_despacho")
-    private int db_direccion_despacho;
+    private String db_direccion_despacho;
     @Column(name="db_fecha_despacho")
     private Date db_fecha_despacho;
     @Column(name="db_fecha_compra")
@@ -57,9 +57,9 @@ public class detalle_boleta {
         this.db_nombre_recibidor = db_nombre_recibidor;
     }
 
-    public int getDb_direccion_despacho() {
+    public String getDb_direccion_despacho() {
         return db_direccion_despacho;}
-    public void setDb_direccion_despacho(int db_direccion_despacho) {
+    public void setDb_direccion_despacho(String db_direccion_despacho) {
         this.db_direccion_despacho = db_direccion_despacho;
     }
 
