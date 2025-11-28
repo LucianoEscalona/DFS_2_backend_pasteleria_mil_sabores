@@ -1,6 +1,6 @@
 package DFS_2.pms.controller;
 
-import DFS_2.pms.entity.producto;
+import DFS_2.pms.entity.Producto;
 import DFS_2.pms.service.ProductoServicio;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -24,23 +24,23 @@ public class ProductoControlador {
         @ApiResponse(responseCode = "200", description = "Producto creado exitosamente")
     })
     @PostMapping("/addProducto")
-    public producto c_guardarProducto(@RequestBody producto p){
+    public Producto c_guardarProducto(@RequestBody Producto p){
         return servicio.guardadProducto(p);
     }
     @Operation(summary = "Crear múltiples productos", description = "Crea varios productos en el sistema de una sola vez")
     @PostMapping("/addProductos")
-    public List<producto> c_guardarProductos(@RequestBody List<producto> ls_p){
+    public List<Producto> c_guardarProductos(@RequestBody List<Producto> ls_p){
         return servicio.guardarProductos(ls_p);
     }
     
     @Operation(summary = "Listar todos los productos", description = "Obtiene la lista completa de productos disponibles")
     @GetMapping("/productos")
-    public List<producto> c_obtenerProductos(){
+    public List<Producto> c_obtenerProductos(){
         return servicio.obtenerProductos();
     }
     @Operation(summary = "Obtener producto por ID", description = "Busca un producto específico por su identificador")
     @GetMapping("/productoByID/{p_id}")
-    public producto c_obtenerProductoID(@PathVariable int p_id){
+    public Producto c_obtenerProductoID(@PathVariable int p_id){
         return servicio.obtenerProductoID(p_id);
     }
     /*
@@ -55,7 +55,7 @@ public class ProductoControlador {
     */
     @Operation(summary = "Modificar producto", description = "Actualiza la información de un producto existente")
     @PutMapping("/modificarProducto")
-    public producto c_modificarProducto(@RequestBody producto p){
+    public Producto c_modificarProducto(@RequestBody Producto p){
         return servicio.modificarProducto(p);
     }
     

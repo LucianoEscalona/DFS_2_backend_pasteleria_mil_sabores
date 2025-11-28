@@ -1,30 +1,30 @@
 package DFS_2.pms.service;
 
-import DFS_2.pms.entity.producto;
+import DFS_2.pms.entity.Producto;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import DFS_2.pms.repository.productoRepositorio;
+import DFS_2.pms.repository.ProductoRepositorio;
 
 @Service
     public class ProductoServicio {
     
     @Autowired
-    private productoRepositorio repositorio;
+    private ProductoRepositorio repositorio;
     
     //CRUD
     @SuppressWarnings("null")
-    public producto guardadProducto(producto p){
+    public Producto guardadProducto(Producto p){
         return repositorio.save(p);
     }
     @SuppressWarnings("null")
-    public List<producto> guardarProductos(List<producto> ls_p){
+    public List<Producto> guardarProductos(List<Producto> ls_p){
         return repositorio.saveAll(ls_p);
     }
-    public List<producto> obtenerProductos(){
+    public List<Producto> obtenerProductos(){
         return repositorio.findAll();
     }
-    public producto obtenerProductoID(int id_p){
+    public Producto obtenerProductoID(int id_p){
         return repositorio.findById(id_p).orElse(null);
     }
     /*
@@ -35,8 +35,8 @@ import DFS_2.pms.repository.productoRepositorio;
         return repositorio.findByNombre(nombre_p);
     }
     */
-    public producto modificarProducto(producto p_mod){
-        producto prod_modificado = repositorio.findById(p_mod.getP_id()).orElse(null);
+    public Producto modificarProducto(Producto p_mod){
+        Producto prod_modificado = repositorio.findById(p_mod.getP_id()).orElse(null);
             prod_modificado.setP_codigo(p_mod.getP_codigo());
             prod_modificado.setP_nombre(p_mod.getP_nombre());
             prod_modificado.setP_categoria(p_mod.getP_categoria());
