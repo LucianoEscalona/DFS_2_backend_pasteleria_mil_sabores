@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Component
-@org.springframework.core.annotation.Order(2) // Se ejecuta después del UsuarioAdminLoader
+@org.springframework.core.annotation.Order(3) // Se ejecuta después del UsuarioAdminLoader
 public class ProductosLoader implements CommandLineRunner {
 
     @Autowired

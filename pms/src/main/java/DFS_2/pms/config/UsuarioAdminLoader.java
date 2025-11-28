@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 @Component
-@Order(1) // Se ejecuta antes que ProductosLoader
+@Order(2) // Se ejecuta después de CategoriasLoader
 public class UsuarioAdminLoader implements CommandLineRunner {
 
     @Autowired
