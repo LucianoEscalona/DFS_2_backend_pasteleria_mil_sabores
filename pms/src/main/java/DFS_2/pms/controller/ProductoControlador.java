@@ -1,7 +1,7 @@
 package DFS_2.pms.controller;
 
 import DFS_2.pms.entity.producto;
-import DFS_2.pms.service.ProductoServicio;
+import DFS_2.pms.service.productoServicio;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 public class ProductoControlador {
     
     @Autowired
-    private ProductoServicio servicio;
+    private productoServicio servicio;
     
     @Operation(summary = "Crear un nuevo producto", description = "Crea un nuevo producto en el sistema")
     @ApiResponses(value = {
