@@ -30,6 +30,13 @@ public class detalle_boletaControlador {
     public detalle_boleta c_obtenerDetalle_boletaID(@PathVariable int db_id){
         return servicio.obtenerDetalle_boletaID(db_id);
     }
+    
+    @Operation(summary = "Modificar detalle de boleta", description = "Actualiza la información de un detalle de boleta existente")
+    @PutMapping("/modificarDetalle_boleta")
+    public detalle_boleta c_modificarDetalle_boleta(@RequestBody detalle_boleta db){
+        return servicio.modificarDetalle_boleta(db);
+    }
+    
     @DeleteMapping("/eliminarDetalle_boleta/{db_id}")
     public String c_borrarDetalle_boleta(@PathVariable int db_id){
         return servicio.borrarDetalle_boleta(db_id);

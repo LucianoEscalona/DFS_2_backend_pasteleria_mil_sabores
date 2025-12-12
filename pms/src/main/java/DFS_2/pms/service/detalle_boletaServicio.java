@@ -27,4 +27,9 @@ public class detalle_boletaServicio {
         repositorio.deleteById(id_db);
         return "Detalle de boleta eliminado correctamente.";
     }
+    
+    @SuppressWarnings("null")
+    public detalle_boleta modificarDetalle_boleta(detalle_boleta db){
+        return repositorio.save(db);
+    }
 }
