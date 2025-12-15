@@ -12,6 +12,7 @@ public class UsuarioDTO {
     private String comuna;
     private String region;
     private boolean isAdmin;
+    private boolean isVendedor;
 
     public int getId() {
         return id;
@@ -99,5 +100,13 @@ public class UsuarioDTO {
 
     public void setIsAdmin(boolean admin) {
         isAdmin = admin;
+    }
+
+    public boolean getIsVendedor() {
+        return isVendedor;
+    }
+
+    public void setIsVendedor(boolean vendedor) {
+        isVendedor = vendedor;
     }
 }
