@@ -15,9 +15,9 @@ public class usuario {
     @Column(name="u_apellido")
     private String u_apellido;
     @Column(name="u_correo")
-    private String u_correo;
+    private String correo;
     @Column(name="u_contrasenia")
-    private String u_contrasenia;
+    private String password;
     @Column(name="u_direccion")
     private String u_direccion;
     @Column(name="u_f_nacimiento")
@@ -62,19 +62,19 @@ public class usuario {
     }
 
     public String getU_correo() {
-        return u_correo;
+        return correo;
     }
 
     public void setU_correo(String u_correo) {
-        this.u_correo = u_correo;
+        this.correo = u_correo;
     }
 
     public String getU_contrasenia() {
-        return u_contrasenia;
+        return password;
     }
 
     public void setU_contrasenia(String u_contrasenia) {
-        this.u_contrasenia = u_contrasenia;
+        this.password = u_contrasenia;
     }
 
     public String getU_direccion() {
@@ -151,7 +151,7 @@ public class usuario {
 
     @Override
     public String toString() {
-        return "usuario{" + "u_id=" + u_id + ", u_nombre=" + u_nombre + ", u_apellido=" + u_apellido + ", u_correo=" + u_correo + ", u_contrasenia=" + u_contrasenia + ", u_direccion=" + u_direccion + ", u_f_nacimiento=" + u_f_nacimiento + ", u_f_registro=" + u_f_registro + ", u_rol=" + u_rol + ", u_comuna=" + u_comuna + ", u_region=" + u_region + ", u_descuento_10=" + u_descuento_10 + ", u_descuento_50=" + u_descuento_50 + ", u_regalo_cumpleanios=" + u_regalo_cumpleanios + '}';
+        return "usuario{" + "u_id=" + u_id + ", u_nombre=" + u_nombre + ", u_apellido=" + u_apellido + ", u_correo=" + correo + ", u_contrasenia=" + password + ", u_direccion=" + u_direccion + ", u_f_nacimiento=" + u_f_nacimiento + ", u_f_registro=" + u_f_registro + ", u_rol=" + u_rol + ", u_comuna=" + u_comuna + ", u_region=" + u_region + ", u_descuento_10=" + u_descuento_10 + ", u_descuento_50=" + u_descuento_50 + ", u_regalo_cumpleanios=" + u_regalo_cumpleanios + '}';
     }
     
 }

@@ -5,6 +5,7 @@ public class UsuarioDTO {
     private String nombre;
     private String apellido;
     private String correo;
+    private String password;
     private String direccion;
     private String fechaNacimiento;
     private String fechaRegistro;
@@ -12,6 +13,14 @@ public class UsuarioDTO {
     private String comuna;
     private String region;
     private boolean isAdmin;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public int getId() {
         return id;

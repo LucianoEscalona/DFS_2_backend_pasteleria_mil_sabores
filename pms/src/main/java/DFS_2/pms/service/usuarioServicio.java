@@ -3,6 +3,7 @@ package DFS_2.pms.service;
 import DFS_2.pms.entity.usuario;
 import DFS_2.pms.repository.usuarioRepositorio;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +28,10 @@ public class usuarioServicio {
     }
     public usuario obtenerUsuarioID(int u_id){
         return repositorio.findById(u_id).orElse(null);
+    }
+    public usuario obtenerUsuarioCorreo(String correo){
+        Optional<usuario> opt = repositorio.findByCorreo(correo);
+        return opt.orElse(null);
     }
     
     public usuario modificarUsuario(usuario u){
