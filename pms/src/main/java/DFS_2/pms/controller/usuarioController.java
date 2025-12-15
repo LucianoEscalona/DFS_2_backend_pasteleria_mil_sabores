@@ -68,6 +68,7 @@ public class usuarioController {
             usuarioDTO.setRegion(usuario.getU_region());
             usuarioDTO.setIsAdmin("ADMIN".equals(usuario.getU_rol()));
             usuarioDTO.setPassword(usuario.getU_contrasenia());
+            usuarioDTO.setIsVendedor("VENDEDOR".equals(usuario.getU_rol()));
             
             return new LoginResponse(true, "Login exitoso", usuarioDTO);
         }
